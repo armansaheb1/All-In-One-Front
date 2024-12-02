@@ -2,7 +2,9 @@
     <header class="sticky top-0 bg-blue-900 bg-opacity-90 shadow-md z-50">
         <nav class="container mx-auto flex justify-between items-center py-4 px-6">
             <!-- Logo / Title -->
-            <h1 class="text-2xl font-bold">AllinOne AI Services</h1>
+            <nuxt-link to="/" style="text-align: center;">
+                <h1 class="text-2xl font-bold">AllinOne </h1> AI Services
+            </nuxt-link>
 
             <!-- Desktop Menu -->
             <div class="hidden sm:flex space-x-6">
