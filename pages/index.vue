@@ -17,13 +17,13 @@
           </p>
 
           <!-- Action Buttons -->
-          <div class="space-x-4">
+          <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <button
-              class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl shadow-lg transition duration-300">
+              class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl shadow-lg transition duration-300 w-full sm:w-auto">
               Explore Services
             </button>
             <button
-              class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-xl shadow-lg transition duration-300">
+              class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-xl shadow-lg transition duration-300 w-full sm:w-auto">
               Request a Demo
             </button>
           </div>
@@ -36,28 +36,21 @@
           <div v-for="item in data"
             class="bg-blue-800 p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-200">
             <div class="mb-4">
-              <i :class="`fas ${item.icon} text-3xl text-white-400`"></i>
+              <i :class="`fas ${item['icon']} text-3xl text-white-400`"></i>
             </div>
             <h4 class="text-lg font-semibold mb-2">{{ item['name'] }}</h4><br>
             <p class="text-sm mb-2" style="height: 140px;text-align: center;">{{ item['description'] }}</p>
             <button class="text-purple-400 hover:text-purple-300 text-xs">Learn More</button>
           </div>
-
-
-
-
         </div>
       </section>
 
-      <section id="use-cases" class="container mx-auto py-20">
+      <!-- <section id="use-cases" class="container mx-auto py-20">
         <h2 class="text-3xl font-bold text-center mb-12">Use Cases</h2>
-      </section>
+      </section> -->
     </MainLayout>
   </div>
 </template>
-
-<style scoped></style>
-
 
 <script setup lang="ts">
 import { useFetch } from '#app'
@@ -68,3 +61,7 @@ definePageMeta({
   layout: 'main'
 })
 </script>
+
+<style scoped>
+/* Optional custom styles for responsiveness */
+</style>
